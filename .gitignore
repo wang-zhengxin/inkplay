@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Development captures; curated screenshots live in docs/images/.
+/*-preview.jpg
+/*-preview.png
+/preview.jpg

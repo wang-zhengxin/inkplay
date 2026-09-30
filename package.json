@@ -1,0 +1,6 @@
+{
+  "name": "inkplay", "version": "1.0.0", "private": true, "type": "module",
+  "description": "字间漫游 — 可定制的文字平台小游戏与关卡工坊",
+  "scripts": { "start": "node server.mjs", "test": "node --test tests/*.test.js", "build": "node scripts/build.mjs" },
+  "engines": { "node": ">=22" }
+}

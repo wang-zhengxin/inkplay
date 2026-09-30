@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>字间漫游</title>
+  <link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <canvas id="canvas" tabindex="0" aria-label="字间漫游：A D 或方向键移动，W 或上方向键跳跃，空格变大，R 重来"></canvas>
+  <button id="language-switch" class="language-switch" type="button" aria-label="切换到英文" aria-pressed="false" title="切换到英文"><span lang="zh-CN" data-language="zh">中</span><span class="language-divider" aria-hidden="true">/</span><span lang="en" data-language="en">EN</span></button>
+  <a id="studio-entry" class="studio-entry" href="editor.html" aria-label="设置与创作" title="设置与创作">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.4 3-.5 2a8 8 0 0 0-1.7 1L5.2 5.4 3 9.2l1.5 1.5a8 8 0 0 0 0 2.6L3 14.8l2.2 3.8 2-.6a8 8 0 0 0 1.7 1l.5 2h5.2l.5-2a8 8 0 0 0 1.7-1l2 .6 2.2-3.8-1.5-1.5a8 8 0 0 0 0-2.6L21 9.2l-2.2-3.8-2 .6a8 8 0 0 0-1.7-1l-.5-2Z"/><circle cx="12" cy="12" r="3"/></svg>
+  </a>
+  <aside id="controls-hint" class="controls-hint" aria-label="操作规则">
+    <p><kbd>A D</kbd><span>或</span><kbd>← →</kbd><span>移动</span></p>
+    <p><kbd>W / ↑</kbd><span>按住连续跳跃</span></p>
+    <p><kbd>SPACE</kbd><span>变大</span><kbd>R</kbd><span>重来</span></p>
+    <p class="goal-hint">触碰 <span>← →</span> 翻页 · <span>✧</span> 可选收集</p>
+  </aside>
+  <div id="touch-controls" class="touch-controls" hidden>
+    <button data-control="left" aria-label="向左">←</button>
+    <button data-control="right" aria-label="向右">→</button>
+    <button data-control="grow" aria-label="变大">●</button>
+    <button data-control="jump" aria-label="跳跃">↑</button>
+  </div>
+  <canvas id="page-turn" class="page-turn" aria-hidden="true" hidden></canvas>
+  <script type="module" src="src/game.js"></script>
+</body>
+</html>
